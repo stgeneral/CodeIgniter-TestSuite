@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<phpunit
+    colors="true"
+    stopOnError="false"
+    stopOnFailure="false"
+    stopOnIncomplete="false"
+    stopOnSkipped="false"
+    processIsolation="true"
+    bootstrap="support.php"
+    >
+    <php>
+        <server name="SERVER_NAME" value="http://example.com" />
+    </php>
+    <testsuites>
+        <testsuite name="ModelTests">
+            <directory suffix=".php">models</directory>
+        </testsuite>
+        <testsuite name="HelperTests">
+            <directory suffix=".php">helpers</directory>
+        </testsuite>
+        <testsuite name="ControllerTests">
+            <directory suffix=".php">controllers</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>
